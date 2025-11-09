@@ -87,5 +87,3 @@ class AnalysisAgent:
 
 ---
 
-*End of document.*
-
