@@ -9,7 +9,7 @@ class AnalysisAgent:
         print("[AnalysisAgent] Analyzing summarized trends...")
         message = HumanMessage(
             content=(
-                f"Analyze the following consumer trend summary. "
+                f"Analyze the following summary. "
                 f"Identify key themes, industries, sentiment, and potential opportunities.\n\n{summary}"
             )
         )

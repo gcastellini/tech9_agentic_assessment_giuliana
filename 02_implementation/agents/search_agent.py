@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-print("Loaded Tavily key:", os.getenv("TAVILY_API_KEY"))
+
 
 class SearchAgent:
     def __init__(self, llm=None):
@@ -32,7 +32,7 @@ class SearchAgent:
         print("[WebAgent] Summarizing retrieved information...")
     
         message = HumanMessage(
-            content=f"Summarize the following recent consumer trend information for 2025:\n{web_content[:4000]}"
+            content=f"Summarize the following information:\n{web_content[:4000]}"
         )   
 
         summary = self.llm.invoke([message])

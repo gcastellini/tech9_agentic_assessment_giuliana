@@ -25,10 +25,10 @@ Goals:
 **Important fields and methods:**
 ```py
 class SearchAgent:
-    def __init__(self, llm=None, search_client=None):
+    def __init__(self, llm=None):
         # llm: LLM wrapper object
         # search_client: external search tool (TavilyClient)
-    def search_trends(self, query: str) -> str:
+    def search_trends(self, query: str):
         # returns a summarized string
 ```
 
@@ -47,25 +47,15 @@ class SearchAgent:
 
 **Key behaviours:**
 - Receives text from `SearchAgent` and runs a reasoning prompt to extract insights.
-- Returns LLM output (ideally structured: JSON or bullet lists).
+- Returns LLM output.
 
 **Important fields and methods:**
 ```py
 class AnalysisAgent:
     def __init__(self, llm=None):
         # create or accept an LLM instance
-    def analyze_trends(self, summary: str) -> str:
+    def analyze_trends(self, summary: str):
         # produce analysis
-```
-
-**Output format suggestion:** Prefer structured JSON for programmatic consumption, for example:
-```json
-{
-  "themes": ["sustainability", "ai adoption"],
-  "industries": ["retail", "financial services"],
-  "sentiment": "mixed",
-  "opportunities": ["subscription models", "automation tooling"]
-}
 ```
 
 ---
